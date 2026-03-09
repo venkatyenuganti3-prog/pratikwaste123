@@ -1,0 +1,9 @@
+{
+	"name": "students-data",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "763a5271-2bf7-462e-9df3-29452a18af3d",
+		"tenantId": "2d1ea684-8b47-41c9-a580-011ccdbb4953"
+	}
+}
