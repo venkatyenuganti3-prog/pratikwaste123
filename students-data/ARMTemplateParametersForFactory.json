@@ -1,0 +1,159 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "students-data"
+		},
+		"AzureDataLakeStorage10_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage11_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage12_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage13_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage14_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage15_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage16_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage17_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage18_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage19_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage20_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage21_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage22_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage23_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage24_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage25_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage26_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage27_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage28_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage29_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage6_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage7_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage8_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage9_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage10_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage11_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage12_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage13_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage14_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage15_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage16_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage17_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage18_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage19_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage20_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage21_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage22_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage23_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage24_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage25_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage26_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage27_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage28_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage29_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage6_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage7_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage8_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage9_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		}
+	}
+}
