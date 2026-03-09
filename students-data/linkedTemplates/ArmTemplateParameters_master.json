@@ -80,6 +80,12 @@
 		"AzureDataLakeStorage9_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage30_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage31_accountKey": {
+			"value": ""
+		},
 		"AzureDataLakeStorage10_properties_typeProperties_url": {
 			"value": "https://amaras12326.dfs.core.windows.net/"
 		},
@@ -153,6 +159,12 @@
 			"value": "https://amaras12326.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorage9_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage30_properties_typeProperties_url": {
+			"value": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage31_properties_typeProperties_url": {
 			"value": "https://amaras12326.dfs.core.windows.net/"
 		},
 		"containerUri": {

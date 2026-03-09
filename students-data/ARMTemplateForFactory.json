@@ -107,6 +107,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage9'"
 		},
+		"AzureDataLakeStorage30_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage30'"
+		},
+		"AzureDataLakeStorage31_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage31'"
+		},
 		"AzureDataLakeStorage10_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
@@ -204,6 +212,14 @@
 			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorage9_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage30_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage31_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
 		}
@@ -337,6 +353,57 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Copy data1",
+						"description": "i need copy data from 1 container to other",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							},
+							"sink": {
+								"type": "JsonSink",
+								"storeSettings": {
+									"type": "AzureBlobFSWriteSettings"
+								},
+								"formatSettings": {
+									"type": "JsonWriteSettings"
+								}
+							},
+							"enableStaging": false
+						},
+						"inputs": [
+							{
+								"referenceName": "ADLSSourceLinkedServices",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "Json7",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
 					}
 				],
 				"policy": {
@@ -346,7 +413,9 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ADLSSSourceLinkedService')]",
-				"[concat(variables('factoryId'), '/datasets/Json6')]"
+				"[concat(variables('factoryId'), '/datasets/Json6')]",
+				"[concat(variables('factoryId'), '/datasets/ADLSSourceLinkedServices')]",
+				"[concat(variables('factoryId'), '/datasets/Json7')]"
 			]
 		},
 		{
@@ -1056,6 +1125,159 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage30')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('AzureDataLakeStorage30_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDataLakeStorage30_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ADLSSourceLinkedServices')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLakeStorage30",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "students_practice_dataset.json",
+						"fileSystem": "simha12326"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "{\"StudentID\":\"1\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Name\":\"Ravi\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Age\":\"18\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Gender\":\"M\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Math\":\"85\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Science\":\"78\"",
+						"type": "String"
+					},
+					{
+						"name": "\"English\":\"88\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Total\":\"251\"",
+						"type": "String"
+					},
+					{
+						"name": "\"Grade\":\"A\"}",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage30')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDataLakeStorage31')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('AzureDataLakeStorage31_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDataLakeStorage31_accountKey')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Json7')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureDataLakeStorage31",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileSystem": "kambampati12345"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"StudentID": {
+							"type": "string"
+						},
+						"Name": {
+							"type": "string"
+						},
+						"Age": {
+							"type": "string"
+						},
+						"Gender": {
+							"type": "string"
+						},
+						"Math": {
+							"type": "string"
+						},
+						"Science": {
+							"type": "string"
+						},
+						"English": {
+							"type": "string"
+						},
+						"Total": {
+							"type": "string"
+						},
+						"Grade": {
+							"type": "string"
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage31')]"
+			]
 		}
 	]
 }

@@ -107,6 +107,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage9'"
 		},
+		"AzureDataLakeStorage30_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage30'"
+		},
+		"AzureDataLakeStorage31_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage31'"
+		},
 		"AzureDataLakeStorage10_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
@@ -204,6 +212,14 @@
 			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorage9_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage30_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage31_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://amaras12326.dfs.core.windows.net/"
 		},
@@ -387,6 +403,12 @@
 					"AzureDataLakeStorage9_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage9_accountKey')]"
 					},
+					"AzureDataLakeStorage30_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage30_accountKey')]"
+					},
+					"AzureDataLakeStorage31_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage31_accountKey')]"
+					},
 					"AzureDataLakeStorage5_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage5_properties_typeProperties_url')]"
 					},
@@ -401,6 +423,12 @@
 					},
 					"AzureDataLakeStorage9_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage9_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage30_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage30_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage31_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage31_properties_typeProperties_url')]"
 					}
 				}
 			},
